@@ -1,0 +1,119 @@
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Fonte moderna */
+}
+
+header {
+    background-color: #16066d;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Roboto', Arial, sans-serif; /* Nova fonte */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que o conteúdo se ajuste em telas menores */
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.menu {
+    width: 200px;
+    background-color: #33bed4;
+    padding: 15px;
+    height: calc(100vh - 80px);
+    flex-shrink: 0;
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.menu nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu nav ul li {
+    margin-bottom: 10px;
+}
+
+.menu nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    display: block;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+.menu nav ul li a:hover {
+    background-color: #333;
+    color: white;
+}
+
+.materia {
+    flex-grow: 1;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-left: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.materia h2 {
+    margin-bottom: 15px;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #16066d;
+}
+
+.materia a {
+    text-decoration: none;
+    color: black;
+}
+
+.materia a:hover h2 {
+    color: #333;
+}
+
+.imagem-principal {
+    width: 100%;
+    max-width: 600px; /* Aumentar o tamanho máximo da imagem */
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+    object-fit: cover;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha o menu e a matéria em telas menores */
+    }
+
+    .menu {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .materia {
+        margin-left: 0;
+    }
+}
+
+/* Fonte personalizada para o título */
+@font-face {
+    font-family: 'FonteTitulo';
+    src: url('caminho/para/font-titulo.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header h1 {
+    font-family: 'FonteTitulo', Arial, sans-serif;
+}
